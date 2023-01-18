@@ -10,7 +10,7 @@
                         komentar <br>
                         <input type="text" name="" id="" class="form-control" wire:model='txtkomentar'/>
                         <br>
-                        <input type="submit" class="btn btn-primary" value="KIRIM">
+                        <input type="submit" class="btn btn-primary" value="KIRIM" wire:click='simpan'>
                     </div>
                 </div>
             </div>
@@ -27,6 +27,19 @@
                             </i>
                         </p>
                         <hr>
+                        @foreach ($isi_komentar as $item)
+                            saya pada {{carbon\carbon::parse($item->created_at)->isoFormat('dddd,D MMMMM Y')}}
+                            Menulis: <br>
+                            <p>
+                                <i>
+                                    {{ $item->isi_komentar }}
+                                </i>
+                                <button class="float-end btn btn-danger" wire:click="hapus('{{ $item->id }}')">
+                                    Hapus
+                                </button>
+                            </p>
+                            <hr>
+                        @endforeach
 
                     </div>
                 </div>
