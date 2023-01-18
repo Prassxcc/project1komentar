@@ -10,7 +10,14 @@
     @livewireStyles
 </head>
 <body>
-    HAllo test dulu
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Bio Sawit</a>
+          </div>
+        </nav>
+      </div>
+
     @livewire('berita')
 
     @livewireScripts
