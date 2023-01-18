@@ -1,5 +1,5 @@
 <div>
-    <div class="container">
+    <div class="container mt-4">
         <div class="row">
             <div class="col-3">
                 <div class="card">
@@ -28,7 +28,7 @@
                         </p>
                         <hr>
                         @foreach ($isi_komentar as $item)
-                            saya pada {{carbon\carbon::parse($item->created_at)->isoFormat('dddd,D MMMMM Y')}}
+                            saya, di unggah pada {{carbon\carbon::parse($item->created_at)->isoFormat('dddd,D MMMMM Y')}}
                             Menulis: <br>
                             <p>
                                 <i>
